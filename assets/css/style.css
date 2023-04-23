@@ -73,3 +73,14 @@ header {
     border-radius: 30px;
     color: #751BFF;
 }
+
+#start-quiz button:hover {
+    color: white;
+    background-color: #751BFF;
+}
+
+/* .hidden {
+    display: none;
+} */
+
+/* Question section styles */
