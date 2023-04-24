@@ -8,7 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
+h1 {
     padding: 25px;
     box-shadow: 0 0 10px #751BFF;
     text-align: center;
@@ -41,7 +41,7 @@ header {
     font-size: 20px;
 }
 
-#start-quiz {
+.start-container {
     margin: 100px;
     display: flex;
     justify-content: center;
@@ -52,21 +52,21 @@ header {
     padding-bottom: 30px;    
 }
 
-#start-quiz h2 {
+.start-container h2 {
     padding-top: 30px;
     padding-bottom: 15px;
     text-align: center;
     font-size: 30px;
 }
 
-#start-quiz h3, p {
+.start-container h3, p {
     padding-top: 15px;
     padding-bottom: 30px;
     text-align: center;
     font-size: 20px;
 }
 
-#start-quiz button {
+.start-container button {
     padding: 10px;
     font-size: 20px;
     margin-top: 20px;
@@ -74,7 +74,7 @@ header {
     color: #751BFF;
 }
 
-#start-quiz button:hover {
+.start-container button:hover {
     color: white;
     background-color: #751BFF;
 }
@@ -84,3 +84,92 @@ header {
 } */
 
 /* Question section styles */
+#quiz-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    box-shadow: 0 0 10px #751BFF;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    margin: 100px;
+}
+
+.question-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.answer-choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 400px;
+    text-align: left;
+}
+
+/* Answer result styles */
+#correct, #wrong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.answer-choice-results {
+    font-size: 36px;
+}
+
+/* All done section styles */
+#all-done {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.all-done-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+    width: 50px;
+}
+
+#submit-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
