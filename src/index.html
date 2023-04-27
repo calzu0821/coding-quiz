@@ -4,67 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
-    <link rel="icon" type="image/png" href="../assets/images/java-script.png">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/images/java-script.png">
+    <title>JavaScript Quiz</title>
 </head>
 <body>
-    <header>
-        <h1>JavaScript Quiz 📝 </h1>
-    </header>
-<!--This is the ribbon section at the top where View Highscores and the Timer lie.-->
-    <!-- <section class="top-container"> -->
-        <div id="highscores-button" class="top-container">
-            <button id="view-score"><a href="#">View Highscores</a></button>
-            <div class="timer" id="timer">
-                <button id="timer1">Timer: </button>
-            </div>
-        </div>
-<!--Start container-->
-    <main class="start-container">
-        <div class="quiz-container" id="start-quiz">
-            <h2 class="start-title">Coding Quiz Challenge!</h2>
-            <p class="start-text">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! Click the button below and get ready to put your JavaScript knowledge to the test!</p>
-            <button onclick="startQuiz()" id="start-button">START QUIZ</button>
-        </div>
-    </main>
-<!--Section for all quiz questions.-->
-    <section class="hidden" id="quiz-questions">
-        <h3 class=" screen-title question-header" id="question-title">Questions</h3>
-        <div class="answer-choices" id="answer-choices">
-            <button id="question0" class="question-button">Question1</button>
-            <br><br>
-            <button id="question1" class="question-button">Question2</button>
-            <br><br>
-            <button id="question2" class="question-button">Question3</button>
-            <br><br>
-            <button id="question3" class="question-button">Question4</button>
-            <br><br>
-        </div>
-    </section>
-<!--Section for correct/wrong answers.-->
-    <div class="hidden" id="correct">
-        <h3 class="answer-choice-results">Correct!</h3>
+<!--Header Begins banner-->
+  <header>
+    <h1 class="header">JavaScript Quiz 📝</h1>
+  </header>
+<!--View Higscores and Timer container-->
+    <div id="highscore-btn">
+      <button id="view-score"><a href="#">View Highscores</a> </button>      
+      <div class="timer" id="timer" style="display: none;">
+        <button id="timer1">Time: </button>
+      </div>
     </div>
-
-    <div class="hidden" id="wrong">
-        <h3 class="answer-choice-results">Wrong!</h3>
+<!--Quiz container Section-->
+  <main class="quiz-container">
+    <div class="start-box" id="start-screen"> 
+        <h2 class="screen-title">Coding Quiz Challenge!</h2>
+          <p class="start-text">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! Click the button below and get ready to put your JavaScript knowledge to the test!</p>
+        <button onclick="startQuiz()" id="start-btn">Start Quiz</button>
     </div>
-<!--End screen for view Highscores and storage of scores in results-->
-    <section id="end-screen" class="hidden index">
-        <h1 class="screen-title">JavaScript Quiz Highscores 🏆</h1>
-        <h2 class="all-done-header">All done!</h2>
-          <p>Your final score is <span class="final-score" id="score"></span></p>
-        <form>
-          <label for="initials">Enter your initials:</label>
-          <input type="text" id="initials" name="initials">
-          <button type="button" id="submit-form">Submit</button>
-        </form>
-          <div id="highscore-list"></div>
-          <button id="go-back-btn" class="index">Go Back</button>
-          <button onclick="submitClear()" id="clear-highscores-btn" class="index">Clear Highscores</button>
-      </section>
+  </main>
+<!--Questions container and choice selection-->
+  <section class="hide" id="questions">
+    <h3 class="screen-title question-header" id="question-title">Questions</h3>
+      <div class="choices" id="choices">
+        <button id="question0" class="question-button">Question1</button>
+        <br><br>
+        <button id="question1" class="question-button">Question2</button>
+        <br><br>
+        <button id="question2" class="question-button">Question3</button>
+        <br><br>
+        <button id="question3" class="question-button">Question4</button>
+        <br><br>
+      </div>
+  </section>  
+<!--Correct and Incorrect container-->
+  <div class="hide" id="correct">
+    <h3 class="answer-result">Correct!</h3>
+  </div>
 
-    <script src="../assets/scripts/script.js" ></script>
+  <div class="hide" id="incorrect">
+    <h3 class="answer-result">Incorrect!</h3>
+  </div>
+<!--End quiz for results-->
+  <section id="end-screen" class="hide index">
+    <h1 class="screen-title">JavaScript Highscores 🏆</h1>
+    <h2 class="screen-title">All done!</h2>
+      <p>Your final score is <span class="final-score" id="score"></span></p>
+    <form>
+      <label for="initials">Enter your initials:</label>
+      <input type="text" id="initials" name="initials">
+      <button type="button" id="submit-form">Submit</button>
+    </form>
+      <div id="highscore-list"></div>
+      <button id="go-back-btn" class="index">Go Back</button>
+      <button onclick="submitClear()" id="clear-highscores-btn" class="index">Clear Highscores</button>
+  </section> 
+
+  <script src="../assets/scripts/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
