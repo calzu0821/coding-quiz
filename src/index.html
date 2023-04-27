@@ -13,8 +13,8 @@
         <h1>JavaScript Quiz 📝 </h1>
     </header>
 <!--This is the ribbon section at the top where View Highscores and the Timer lie.-->
-    <section class="main-container">
-        <div class="highscores-button">
+    <section class="top-container">
+        <div id="highscores-button">
             <button><a href="./view-highscores.html">View Highscores</a></button>
         </div>
         <div class="timer" id="timer">
@@ -22,8 +22,8 @@
         </div>
     </section>
 <!--Start container-->
-    <div class="quiz-container">
-        <div class="start-container" id="start-quiz">
+    <div class="start-container">
+        <div class="quiz-container" id="start-quiz">
             <h2>Coding Quiz Challenge!</h2>
             <h3>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h3>
             <p>Click the button below and get ready to put your JavaScript knowledge to the test!</p>
@@ -34,15 +34,15 @@
     <div class="hidden" id="quiz-questions">
         <h4 class="question-header" id="question-title">Question</h4>
         <div class="answer-choices" id="answer-choices">
-            <button id="question0" class="question-button">Question0</button>
+            <button id="question" class="question-button">Question</button>
             <br><br>
-            <button id="question1" class="question-button">Question1</button>
+            <button id="question" class="question-button">Question</button>
             <br><br>
-            <button id="question2" class="question-button">Question2</button>
+            <button id="question" class="question-button">Question</button>
             <br><br>
-            <button id="question3" class="question-button">Question3</button>
+            <button id="question" class="question-button">Question</button>
             <br><br>
-            <button id="question4" class="question-button">Question4</button>
+            <button id="question" class="question-button">Question</button>
         </div>
     </div>
 
@@ -54,13 +54,26 @@
         <h4 class="answer-choice-results">Wrong!</h4>
     </div>
 
-    <div class="hidden" id="all-done">
+    <section id="end-screen" class="hide index">
+        <h2 class="screen-title">All done!</h2>
+          <p>Your final score is <span class="final-score" id="score"></span></p>
+        <form>
+          <label for="initials">Enter your initials:</label>
+          <input type="text" id="initials" name="initials">
+          <button type="button" id="submit-form">Submit</button>
+        </form>
+          <div id="highscore-list"></div>
+          <button id="go-back-btn" class="index">Go Back</button>
+          <button onclick="submitClear()" id="clear-highscores-btn" class="index">Clear Highscores</button>
+      </section>
+
+    <!-- <div class="hidden" id="all-done">
         <h2 class="all-done-header">All done!</h2>
         <p>Your final score is <span class="score" id="final-score"></span>.</p>
         <p>Enter initials: <input type="text" id="initials" max="3" required />
             <a href="./view-highscores.html"><button id="submit-button" >Submit</button></a>
         </p>
-    </div>
+    </div> -->
     <script src="../assets/scripts/script.js" ></script>
 </body>
 </html>
