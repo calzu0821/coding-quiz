@@ -9,18 +9,18 @@
     <title>JavaScript Quiz</title>
 </head>
 <body>
-<!--Header Begins banner-->
+<!--Header banner-->
   <header>
     <h1 class="header">JavaScript Quiz 📝</h1>
   </header>
-<!--View Higscores and Timer container-->
+<!--Highscore and timer container-->
     <div id="highscore-btn">
       <button id="view-score"><a href="#">View Highscores</a> </button>      
       <div class="timer" id="timer" style="display: none;">
         <button id="timer1">Time: </button>
       </div>
     </div>
-<!--Quiz container Section-->
+<!--Quiz container-->
   <main class="quiz-container">
     <div class="start-box" id="start-screen"> 
         <h2 class="screen-title">Coding Quiz Challenge!</h2>
@@ -28,7 +28,7 @@
         <button onclick="startQuiz()" id="start-btn">Start Quiz</button>
     </div>
   </main>
-<!--Questions container and choice selection-->
+<!--Questions container and choice options-->
   <section class="hide" id="questions">
     <h3 class="screen-title question-header" id="question-title">Questions</h3>
       <div class="choices" id="choices">
@@ -42,7 +42,7 @@
         <br><br>
       </div>
   </section>  
-<!--Correct and Incorrect container-->
+<!--Correct and incorrect container-->
   <div class="hide" id="correct">
     <h3 class="answer-result">Correct!</h3>
   </div>
@@ -50,7 +50,7 @@
   <div class="hide" id="incorrect">
     <h3 class="answer-result">Incorrect!</h3>
   </div>
-<!--End quiz for results-->
+<!--End quiz and results-->
   <section id="end-screen" class="hide index">
     <h1 class="screen-title">JavaScript Highscores 🏆</h1>
     <h2 class="screen-title">All done!</h2>

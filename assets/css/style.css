@@ -9,7 +9,7 @@
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
   }
-  /*Header styling*/
+  /* Header style */
   header {
     background-color: #751BFF;
     color: #fff;
@@ -45,7 +45,7 @@
     border-radius: 10px;
     margin-right:10px;
   }
-  /*Quiz section styling*/  
+  /* Quiz style*/  
   .quiz-container {
     max-width: 800px;
     margin: 0 auto;
@@ -81,7 +81,7 @@
   .start-box button:hover {
     background-color: gray;
   }
-  /*Question and choices styling*/
+  /*Question and answer choices style */
   #questions{
     text-align: center;
   }
@@ -109,11 +109,11 @@
   .question-button:hover {
     background-color: gray;
   }
-  /*Hiding containers styling*/
+  /* Hide style */
   .hide {
     display: none;
   }
-  /*Correct and Incorrect styling for choices*/
+  /* Correct and incorrect answer choices style */
   .answer-result {
     font-size: 32px;
     text-align: center;
@@ -127,7 +127,7 @@
   #incorrect {
     color: red;
   }
-  /* Highscore results styling screen*/
+  /* Highscore results screen style */
   #end-screen {
     text-align: center;
   }
@@ -181,7 +181,7 @@
     border-radius: 5px;
     margin-left: 5px;
   }
-  /*Responsive Design styling*/
+  /* Media queries and responsive design styling */
   @media screen and (max-width: 600px) {
     header {
         font-size: 24px;
