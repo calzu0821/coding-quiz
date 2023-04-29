@@ -37,11 +37,11 @@ To use the Coding Quiz, follow these steps:
 
 Deployed website:
 
-
+https://calzu0821.github.io/coding-quiz/
 
 Screenshot of the coding quiz:
 
-![alt text](../assets/images) ![alt text](../assets/images) ![alt text](../assets/images) 
+![alt text](./assets/images/quiz-screenshot.png) ![alt text](./assets/images/quiz-screenshot1.png) ![alt text](./assets/images/quiz-screenshot2.png) 
 
 ## Credits
 
