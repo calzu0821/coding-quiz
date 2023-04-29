@@ -49,6 +49,7 @@ let seconds = 75;
 let questionIndex = 0;
 let score = 0;
 
+//Start quiz function with timer set interval
 function startQuiz() {
     startPage.setAttribute("class", "hide");
     questionPage.removeAttribute("class");
@@ -66,6 +67,7 @@ function startQuiz() {
     renderQuestion(questionIndex)
 }
 
+//Question rendering with choices
 function renderQuestion(num) {
     const question = questions[num];
     if (question) {
@@ -83,6 +85,7 @@ function renderQuestion(num) {
     }
   }
 
+//Looping answer choices with correct or incorrect. Deducting time if incorrect.
 for (let i = 0; i < questionBtns.length; i++) {
     const button = questionBtns[i];
     button.addEventListener("click", () => {
@@ -119,13 +122,15 @@ for (let i = 0; i < questionBtns.length; i++) {
     });
 }
 
+//Function to hide and set the correct or incorrect container
 function hideFeedBack(){
     setTimeout(() => {
        correctAnswer.setAttribute("class","hide");
        incorrectAnswer.setAttribute("class","hide");
     }, 800);
 }
- 
+
+//End quiz screen
 function endQuiz() {
     let finalScore = document.getElementById("score");
     finalScore.innerHTML = score;
@@ -137,6 +142,7 @@ function endQuiz() {
     highscorelink.setAttribute("class", "hide");
 }
 
+//Adding local storage to store scores and pull when needed
 const submitBtn = document.getElementById("submit-form");
 submitBtn.addEventListener("click", function () {
   let initials = document.getElementById("initials").value;
@@ -147,6 +153,7 @@ submitBtn.addEventListener("click", function () {
   displayHighscores();
 });
 
+//Clearing scores from the local storage
 function submitClear() {
     alert("All highscores have been cleared!");
     localStorage.clear();
@@ -170,6 +177,7 @@ function displayHighscores() {
     }
 }
 
+//Connecting the view high scores link
 highscorelink.addEventListener("click", function () {
   startPage.setAttribute("class", "hide");
   questionPage.setAttribute("class", "hide");
